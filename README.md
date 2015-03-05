@@ -1,4 +1,4 @@
 # sunixy_toolkit
 a  c language tool kit
 
-first program is a list.
+First routine is a list.
