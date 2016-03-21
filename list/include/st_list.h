@@ -7,17 +7,15 @@
 extern "C" {
 #endif
 
-#include <stdio.h>
+#include <st_stdtypes.h>
 
-typedef struct tagst_list_node
-{
+typedef struct tagst_list_node {
 	struct tagst_list_node *prev;
 	struct tagst_list_node *next;
 }st_list_node;
 
-typedef struct tagst_list 
-{
-	unsigned long ulLength;
+typedef struct tagst_list  {
+	uint32_t ulLength;
 	st_list_node *head;
 	st_list_node *tail;	
 } st_list;
@@ -47,17 +45,17 @@ void st_list_destroy(st_list *list);
 void st_list_add_head(st_list *list, st_list_node *node);
 void st_list_add_tail(st_list *list, st_list_node *node);
 void st_list_delete(st_list *list, st_list_node *node);
-unsigned char st_list_have(st_list *list, st_list_node *node);
-unsigned long st_list_length(st_list *list);
+uint8_t st_list_have(st_list *list, st_list_node *node);
+uint32_t st_list_length(st_list *list);
 st_list_node *st_list_get_head(st_list *list);
 st_list_node *st_list_get_tail(st_list *list);
 st_list_node *st_list_delete_head(st_list *list);
 st_list_node *st_list_delete_tail(st_list *list);
-st_list_node *st_list_foreach_find(st_list *list, find_fun fn, unsigned long value);
+st_list_node *st_list_foreach_find(st_list *list, find_fun fn, uint32_t value);
 
 
-#ifdef __cplusplus
+#ifdef	__cplusplus
 }
-#endif
+#endif /* __cplusplus */
 #endif   /*_ST_LIST_H_*/
 

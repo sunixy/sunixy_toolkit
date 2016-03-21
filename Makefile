@@ -1,5 +1,5 @@
 #sunixy toolkit top Makefile
-SUB_DIR=./list/
+SUB_DIR=./list/ ./queue/
 
 default:usr
 

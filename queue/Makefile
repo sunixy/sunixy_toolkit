@@ -1,10 +1,10 @@
 #sunixy toolkit list Makefile
 CC=gcc
 
-INC=-I./include -I../include
+INC=-I./include -I../include/
 SRC=./src
-file=$(SRC)/st_list.c
-objects=st_list.o
+file=$(SRC)/st_queue.c
+objects=st_queue.o
 
 $(objects):$(file)
 	$(CC) $(INC) -c $(file) -o $(objects)

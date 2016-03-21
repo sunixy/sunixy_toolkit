@@ -6,33 +6,28 @@
 static st_list g_unit_test_list = ST_LIST_INIT;
 static st_list *test_list = &g_unit_test_list;
 
-typedef struct tagtest_node_t
-{
+typedef struct tagtest_node_t {
     int id;
     st_list_node node;
     char *comment;
 } test_node_t;
 
-static test_node_t node_1 = 
-{
+static test_node_t node_1 = {
     .id = 1,
     .comment = "unit test node 1\n",
 };
 
-static test_node_t node_2 =
-{
+static test_node_t node_2 = {
     .id = 2,
     .comment = "unit test node 2\n",
 };
 
-static test_node_t node_3 = 
-{
+static test_node_t node_3 = {
     .id = 3,
     .comment = "unit test node 3\n",
 };
 
-static void list_dump(st_list *list)
-{
+static void list_dump(st_list *list) {
     st_list_node *tmp = NULL;
     test_node_t *entry = NULL;
 
@@ -45,8 +40,7 @@ static void list_dump(st_list *list)
     return;
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     list_dump(test_list);
     printf("add node 1 to list head:\n");
     st_list_add_head(test_list, &node_1.node);
